@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -34,4 +34,23 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.btn {
+  padding: 12px 40px;
+  border-radius: 12px;
+  background-color: $light-blue;
+  box-shadow: 1px 1px 4px 3px rgba(135, 206, 250, 0.45);
+  color: $white;
+  transition: background-color 0.5s, box-shadow 0.5s;
+
+  &:hover, &:focus, &:active {
+    background-color: $main;
+    box-shadow: 1px 1px 4px 3px rgba(100, 149, 237, 0.44);
+    outline: none;
+  }
+}
+.error{
+  font-size: 12px;
+  color: $red;
 }

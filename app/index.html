@@ -21,6 +21,9 @@
                 <form class="search__form">
                     <label for="search-field" class="search__label">
                         <input class="input search__input" id="search-field"
+                               placeholder="Введите слова для поиска"
+                               name="search-field"
+                               required
                                type="text">
                     </label>
                     <button class="search__submit" type="submit">
@@ -30,11 +33,34 @@
             </div>
         </div>
     </section>
+    <section class="repositories">
+        <div class="container">
+            <div class="repositories__wrapper">
+                <h2 class="repositories__title">
+                    Лист репозиториев
+                </h2>
+                <ul class="repositories__descriptions">
+                    <li class="repositories__description">
+                        Данных для поиска не поступило
+                    </li>
+                </ul>
+                <div class="repositories__inner"></div>
+                <ul class="repositories__list">
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
 </footer>
 
+<script src="js/vars/vars.js"></script>
+<script src="js/additional/additional.js"></script>
+<script src="js/validator/Validator.js"></script>
+<script src="js/validator/ErrorMessage.js"></script>
+<script src="js/service/getData.js"></script>
+<script src="js/creators/creators.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 

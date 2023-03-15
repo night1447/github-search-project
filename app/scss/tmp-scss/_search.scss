@@ -1,0 +1,101 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0 50px;
+
+  &__title {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $main;
+    padding: 12px;
+    transition: color 0.5s, border-color 0.5s;
+
+    &::placeholder {
+      font-size: 14px;
+      transition: color 0.5s;
+    }
+
+    &:focus, &:active {
+      outline: none;
+      border-color: $light-blue;
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+
+    &._error {
+      border-color: $red;
+    }
+  }
+
+  &__submit {
+    background-color: $main;
+    padding: 12px 40px;
+    border: 1px solid $main;
+    border-radius: 0 10px 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $white;
+    transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+
+    &:hover {
+      background-color: $light-blue;
+      border-color: $light-blue;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $light-blue;
+    }
+
+    &._error {
+      background-color: $red;
+      animation: 2s jitter infinite;
+    }
+  }
+}
+
+@keyframes jitter {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
