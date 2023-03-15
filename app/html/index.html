@@ -1,0 +1,25 @@
+@include('components/_head.html')
+
+<main class="main">
+    <section class="search">
+        <div class="container">
+            <div class="search__wrapper">
+                <h1 class="search__title">
+                    Github Search Repositories
+                </h1>
+                <form class="search__form">
+                    <label for="search-field" class="search__label">
+                        <input class="input search__input" id="search-field"
+                               type="text">
+                    </label>
+                    <button class="search__submit" type="submit">
+                        Поиск
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')
